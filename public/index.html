@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brad-chat</title>
+</head>
+
+<body>
+
+    <style>
+        .col-AB {
+            background-color: darkgrey;
+            text-align: center;
+            height: 300px;
+            width: 300px;
+            margin-top: 50px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1{
+            margin-top: 20px;
+            font-family: cursive
+        }
+
+        .btn {
+          margin-top: 2px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-AB">
+                <h1><i class="fas fa-smile"></i> ChatCord</h1>
+                <main class="join-main">
+                    <form action="chat.html">
+                        <div class="form-control">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" placeholder="Enter username..." required />
+                        </div>
+                        <div class="form-control">
+                            <label for="room">Room</label>
+                            <select name="room" id="room">
+                                <option value="JavaScript" selected>JavaScript</option>
+                                <option value="Python">Python</option>
+                                <option value="PHP">PHP</option>
+                                <option value="C#">C#</option>
+                                <option value="Ruby">Ruby</option>
+                                <option value="Java">Java</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Join Chat</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
