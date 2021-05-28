@@ -4,7 +4,8 @@ const socket =io();
 
 //message from server
 socket.on('message', msg=>{
-    console.log(msg);
+    // console.log(msg);
+    outputMessage(msg);
 });
 
 //sub,it message
@@ -21,3 +22,12 @@ chatForm.addEventListener('submit', e=>{
     e.target.elements.msg.value='';
     e.target.elements.msg.focus();
 });
+
+//output message to dom
+function outputMessage(msg){
+    const div = document.createElement('div');
+    // div.classList.add('message');
+    div.innerHTML=`<p>Rik<span>10.23pm</span></p>
+    <p>${msg}</p>`
+    document.querySelector('.chat-message').appendChild(div);
+}
